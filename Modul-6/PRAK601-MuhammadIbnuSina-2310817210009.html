@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Modul 6</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .image-grid .col-3 {
+        display: none; /* Hide all initially */
+        margin: 10px;
+      }
+      .image-grid .col-3 img {
+        width: 100%;
+        height: auto;
+      }
+      .filter-buttons a {
+        cursor: pointer;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+        margin: 5px;
+        border-radius: 15px; /* Rounded corners */
+        transition: background-color 0.3s ease, border 0.3s ease;
+      }
+      .filter-buttons .active-filter {
+        background-color: #ddd;
+        border: 2px solid #000;
+      }
+      .social-icons i {
+        font-size: 1.5rem; /* Increase icon size */
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="row header">
+      <div
+        class="navbar navbar-expand-lg navbar-light bg-light col-4 justify-content-center align-items-center"
+      >
+        <h1 class="text-center logo">Avicenna</h1>
+      </div>
+
+      <div class="navbar navbar-expand-lg navbar-light bg-light col-2"></div>
+
+      <div
+        class="navbar navbar-expand-lg navbar-light bg-light col-6 d-flex align-items-center justify-content-center"
+      >
+        <nav>
+          <ul class="d-flex mt-3">
+            <li>
+              <a class="test px-4 py-2 list text-dark active1" href="#">
+                HOME
+              </a>
+            </li>
+            <li>
+              <a class="px-4 py-2 list text-secondary" href="Aboutme.html">
+                ABOUT ME
+              </a>
+            </li>
+            <li>
+              <a class="px-4 py-2 list text-secondary" href="Portofolio.html">
+                PORTFOLIO
+              </a>
+            </li>
+            <li>
+              <a class="px-4 py-2 list text-secondary" href="Contact.html">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Aboutme.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Portofolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row carousel">
+      <div
+        class="col d-flex flex-column justify-content-center align-items-center"
+      >
+        <h2>Hola Amigo!!, I am Avi</h2>
+        <h2>
+          I Love take photo & moments with other people, here is the results
+        </h2>
+        <p class="desc">FRIEND / LEADER / BROTHER</p>
+      </div>
+    </div>
+
+    <div class="test row container-fluid">
+      <div
+        class="col d-flex align-items-center justify-content-center filter-buttons"
+      >
+        <ul class="d-flex mt-3">
+          <li>
+            <a
+              class="px-4 py-2 list text-secondary active-filter"
+              onclick="filterSelection('all')"
+            >
+              All
+            </a>
+          </li>
+          <li>
+            <a
+              class="px-4 py-2 list text-secondary"
+              onclick="filterSelection('landscape')"
+            >
+              Landscape
+            </a>
+          </li>
+          <li>
+            <a
+              class="px-4 py-2 list text-secondary"
+              onclick="filterSelection('portrait')"
+            >
+              Portrait
+            </a>
+          </li>
+          <li>
+            <a
+              class="px-4 py-2 list text-secondary"
+              onclick="filterSelection('product')"
+            >
+              Product
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center justify-content-center mb-4">
+      <div class="col image-grid">
+        <div class="col-3">
+          <img src="gambar/AviPic01.jpg" data-category="landscape" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic02.jpg" data-category="portrait" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic03.jpg" data-category="product" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic04.jpg" data-category="landscape" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic05.jpg" data-category="portrait" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic06.jpg" data-category="landscape" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic07.jpg" data-category="product" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic08.jpg" data-category="portrait" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic09.jpg" data-category="landscape" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic10.jpg" data-category="portrait" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic11.jpg" data-category="product" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic12.jpg" data-category="landscape" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic13.jpg" data-category="portrait" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic14.jpg" data-category="landscape" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic15.jpg" data-category="product" />
+        </div>
+        <div class="col-3">
+          <img src="gambar/AviPic16.jpg" data-category="landscape" />
+        </div>
+      </div>
+    </div>
+
+    <div class="roww bottom">
+      <div
+        class="col d-flex flex-column align-items-center justify-content-center"
+      >
+        <h1 class="logo">Avicenna Photography</h1>
+        <p>&copy; Copyrights 2023. All Rights Reserved</p>
+        <p class="social-icons">
+          <a href="#" target="_blank"
+            ><i class="fab fa-facebook text-primary"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="fab fa-twitter text-info"></i
+          ></a>
+          <a href="https://www.instagram.com/mhmmdbnu__/" target="_blank"
+            ><i class="fab fa-instagram text-danger"></i
+          ></a>
+          <a href="https://github.com/Ibnuuuuuuuuuuuuuuuuuuuuuuuuuuuu" target="_blank"
+            ><i class="fab fa-github text-dark"></i
+          ></a>
+          <a href="https://open.spotify.com/user/zuv87og8eapyjo4ucpjkbgczk?si=8aed96484b04455a" target="_blank"
+            ><i class="fab fa-spotify text-success"></i
+          ></a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function filterSelection(category) {
+        var images = document.querySelectorAll(".image-grid .col-3");
+        images.forEach(function (image) {
+          if (
+            category === "all" ||
+            image.querySelector("img").getAttribute("data-category") ===
+              category
+          ) {
+            image.style.display = "block";
+          } else {
+            image.style.display = "none";
+          }
+        });
+
+        // Update active button
+        var buttons = document.querySelectorAll(".filter-buttons a");
+        buttons.forEach(function (button) {
+          button.classList.remove("active-filter");
+        });
+        event.target.classList.add("active-filter");
+      }
+
+      // Initial display setup
+      filterSelection("all");
+    </script>
+  </body>
+</html>
